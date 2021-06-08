@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+* {
+  box-sizing: border-box;
+  background-color: #1f1b24;
+  color: white;
+}
+.box{
+  position: absolute;
+  top: 50%;  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.box h1{
+  position: relative;
+  display: inline-block;
+  padding: 20px 40px;
+  letter-spacing: 20px;
+  text-transform: uppercase;  
+  font-size: 70px;
+  color: #000;  background: #fff;
+  mix-blend-mode: difference;
+}
+.box::before{
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 130px;  height: 100%;
+  background: #fff;
+  animation: animate 5s infinite linear;
+}
+@keyframes animate{
+  0%{
+      left: 0;
+  }
+  50%{
+      left: calc(100% - 130px);
+  }
+  100%{
+      left: 0;
+  }
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+input{
+  background-color: #332940;
+}
+body {
+  font: 16px sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  float: left;
+  padding: 30px;
+  width: 100%;
+}
+
+.search {
+  margin-bottom: 30px;
+}
+
+.search input {
+  font-size: 30px;
+  padding: 10px;
+  width: 100%;
+}
+
+.user-info img {
+  float: left;
+  margin: 0 20px 20px 0;
+  max-height: 200px;
+  text-align: center;
+}
+
+.repos-info li {
+  padding: 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.actions,
+.repos,
+.starred {
+  float: left;
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.actions button {
+  font-size: 20px;
+  font-weight: 700;
+  height: 50px;
+  text-transform: uppercase;
+  width: 48%;
+}
+
+.repos li,
+.starred li {
+  padding: 10px 0;
+}
+button{
+  border: 1px solid white;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+
+button:hover{
+  filter: brightness(0.8);
+}
+.repos li + li,
+.starred li + li {
+  border-top: 1px solid #ccc;
+}  
+div .app img{
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
